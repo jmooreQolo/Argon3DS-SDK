@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PannerNodeTest</title>
+
+<script src="jquery-1.9.1.min.js"></script>
+<script src="Argon3DS.js"></script>
+<script type="text/javascript" src="3DOscillatorTest.js"></script>
+
+
+</head>
+
+<body>
+<form name="formByMe" id="form_" action="" method="GET">
+  Frequency (between 20Hz and 20KHz): <input type="number" name="freq" id="freq" min="20" max="20000" >Hz
+  Panning Angle:  0<input type="range" name="panAngleIn" min ="0" max="359" value="0" onchange="osc3D.updateAngle(this.value)">359
+  Distance:  0<input type="range" name="distIn" min ="0" max="200" value="10" onchange="osc3D.updateDistance(this.value)">200
+  Elevation:  -100<input type="range" name="elevIn" min ="-100" max="100" value="0" onchange="osc3D.updateHeight(this.value)">100
+</form>
+<a href="javascript:constructWave();" id="startLink" >Start Wave</a>
+<br>
+<a href="javascript:osc3D.stop(0);" id="stopLink">Stop Wave</a>
+</body>
+
+</html>

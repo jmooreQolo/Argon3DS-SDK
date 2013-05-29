@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="howler.js"></script>
+<script src="howlerTest.js"></script>
+<title>HowlerSoundTest</title>
+</head>
+<body>
+<form name="formByMe" id="form_" action="" method="GET">
+  Panning Angle:  0<input type="range" name="panAngleIn" min ="0" max="359" value="0" onchange="updateAngle(this.value)">359
+  Distance:  0<input type="range" name="distIn" min ="0" max="200" value="10" onchange="updateDistance(this.value)">200
+  Elevation:  -100<input type="range" name="elevIn" min ="-100" max="100" value="0" onchange="updateHeight(this.value)">100
+</form>
+
+<a href="javascript:startSound();" id="startLink" >Start Clip</a>
+<br>
+<a href="javascript:stopSound();" id="stopLink">Stop Clip</a>
+</html>
